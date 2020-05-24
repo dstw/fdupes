@@ -1,0 +1,24 @@
+---
+group: stable
+dist: bionic
+language: c
+
+before_install:
+  # Install dependencies
+  - sudo apt-get install -y gcc make automake autoconf autotools-dev libpcre2-dev libncurses5-dev
+  # Print information about the environment
+  - gcc --version
+
+install:
+  # Generate configure script
+  - autoreconf --install
+  # Build application
+  - ./configure
+  - make
+
+script:
+  # Make sure it has built successfully
+  - ./fdupes --version
+  # Run a test
+  - ./fdupes testdir/
+  - ./fdupes -r testdir/
