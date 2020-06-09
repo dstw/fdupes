@@ -20,5 +20,5 @@ script:
   # Make sure it has built successfully
   - ./fdupes --version
   # Run a test
-  - ./fdupes testdir/
-  - ./fdupes -r testdir/
+  - cd testdir/
+  - ./test-1.sh
