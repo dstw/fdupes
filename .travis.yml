@@ -20,5 +20,4 @@ script:
   # Make sure it has built successfully
   - ./fdupes --version
   # Run a test
-  - cd testdir/
-  - ./test-1.sh
+  - cd testdir/ && ./test-1.sh
