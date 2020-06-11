@@ -11,46 +11,25 @@ CMD_TEST="../fdupes -rNd ." && $CMD_TEST
 CHECK_SUM=0
 CHECK=0
 [ -f ./zero_a ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./zero_b ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 1
 CHECK=0
 [ -f ./recursed_a/two ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./two ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./twice_one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 2
 CHECK=0
 [ -f ./with\ spaces\ a ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./with\ spaces\ b ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 3
 CHECK=0
 [ -f ./recursed_b/one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./recursed_a/one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 4
 CHECK=0
 [ -f ./recursed_b/two_plus_one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./recursed_b/three ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 5
 [ $CHECK_SUM -eq 5 ] && SUCCESS_CODE=$(($SUCCESS_CODE+1)) && \
 echo \"$CMD_TEST\" success || echo \"$CMD_TEST\" fail
 
@@ -59,46 +38,25 @@ CMD_TEST="../fdupes --recurse -Nd ." && $CMD_TEST
 CHECK_SUM=0
 CHECK=0
 [ -f ./zero_a ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./zero_b ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 1
 CHECK=0
 [ -f ./recursed_a/two ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./two ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./twice_one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 2
 CHECK=0
 [ -f ./with\ spaces\ a ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./with\ spaces\ b ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 3
 CHECK=0
 [ -f ./recursed_b/one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./recursed_a/one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 4
 CHECK=0
 [ -f ./recursed_b/two_plus_one ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ -f ./recursed_b/three ] && CHECK=$(($CHECK+1))
-echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
-echo $CHECK should 1
-echo $CHECK_SUM should 5
 [ $CHECK_SUM -eq 5 ] && SUCCESS_CODE=$(($SUCCESS_CODE+1)) && \
 echo \"$CMD_TEST\" success || echo \"$CMD_TEST\" fail
 
