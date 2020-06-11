@@ -46,7 +46,7 @@ echo $CHECK_SUM should 4
 CHECK=0
 [ -f ./recursed_b/two_plus_one ] && CHECK=$(($CHECK+1))
 echo $CHECK
-[ -f ./recursed_a/three ] && CHECK=$(($CHECK+1))
+[ -f ./recursed_b/three ] && CHECK=$(($CHECK+1))
 echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
 echo $CHECK should 1
@@ -94,7 +94,7 @@ echo $CHECK_SUM should 4
 CHECK=0
 [ -f ./recursed_b/two_plus_one ] && CHECK=$(($CHECK+1))
 echo $CHECK
-[ -f ./recursed_a/three ] && CHECK=$(($CHECK+1))
+[ -f ./recursed_b/three ] && CHECK=$(($CHECK+1))
 echo $CHECK
 [ $CHECK -eq 1 ] && CHECK_SUM=$(($CHECK_SUM+1))
 echo $CHECK should 1
